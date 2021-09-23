@@ -1,11 +1,11 @@
-var express = require('express');
-var app = express();
-app.use('/', function(req, res) {
-res.send('Hello World');
-});
-app.listen(3000);
-console.log('Server running at http://localhost:3000/');
+let express = require('./config/express');
+
+let app = express();
+app.listen(process.env.PORT || 3000);
+// console.log(process.env.PORT);
 module.exports = app;
+
+console.log('Server running at http://localhost:3000/');
 
 // const http = require('http');
 // http.createServer((req, res) => {
