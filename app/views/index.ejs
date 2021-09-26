@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/@fortawesome/fontawesome-free/css/all.min.css">
   </head>
   <body>
-    <img src="img/logo.png" alt="logo" />
-    <h1>Welcome to <%= title %></h1>
+    <!-- include the header partial view for the Navigation Bar -->
+    <%- include('partials/header.ejs') %>
+
+    <!-- Main Content -->
+    <main>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Welcome to <%= title %> page</h1>
+          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- include the header partial view for the Navigation Bar -->
+    <%- include('partials/footer.ejs') %>
+
+    <!-- embed js files -->
+    <script type="text/javascript" src="/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
-</html>
 </html>
