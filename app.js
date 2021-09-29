@@ -4,7 +4,7 @@ let express = require('express'),
   bodyParser = require('body-parser');
   
 let path = require('path');
-let indexRouter = require('./app/routes/index');
+let indexRouter = require('./app/routes/index'); // define the path for routing
 
 module.exports = function() {
   let app = express();
@@ -26,8 +26,9 @@ module.exports = function() {
   app.set('view engine', 'ejs');
 
   app.use('/', indexRouter);
-
-  app.use(express.static(path.join(__dirname, 'public')));
+  
+  // join path to shorten the referenced path
+  app.use(express.static(path.join(__dirname, 'public'))); 
   app.use(express.static(path.join(__dirname, 'node_modules')));
 
   return app;
