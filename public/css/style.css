@@ -1,3 +1,13 @@
 img.logo  {
     width: 40px; height: 40px;
 }
+
+div.container {
+    padding-top: 15px;
+}
+
+.card {
+    display: inline-block !important; 
+    width: 280px;
+    padding-bottom: 10px;
+}
