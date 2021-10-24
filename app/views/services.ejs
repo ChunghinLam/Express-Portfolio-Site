@@ -1,91 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
 
-    <!-- Embed css files -->
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/@fortawesome/fontawesome-free/css/all.min.css">
-  </head>
-  <body>
-    <!-- Include the header partial view for the Navigation Bar -->
-    <%- include('partials/header.ejs') %>
+<!-- Include the header partial view for the Navigation Bar -->
+<%- include('partials/header.ejs') %>
 
-    <!-- Main Content -->
-    <main>
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <h1 class="display-4">Services</h1>
-              <p class="lead">
-                Providing professional services is my ultimate goal, here are some of the techniques and skillsets I familiar with.
+<!-- Include the nav partial view for the Navigation Bar -->
+<%- include('partials/nav.ejs') %>
+
+<!-- Main Content -->
+<main>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 class="display-4">Services</h1>
+          <p class="lead">
+            Providing professional services is my ultimate goal, here are some of the techniques and skillsets I familiar with.
+          </p>
+
+          <div class="card-columns">
+            <div class="card" style="display: inline-block">
+              <img class="card-img-top" src="/img/logo/EnvironmentLogo.jpg" alt="ENVIRONMENT">
+              <div class="card-body">
+                <p class="card-text">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Windows</li>
+                    <li class="list-group-item">Mac</li>
+                    <li class="list-group-item">Linux</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+            <div class="card" style="display: inline-block">
+              <img class="card-img-top" src="/img/logo/MobileLogo.jpg" alt="MOBILE">
+              <div class="card-body">
+                <p class="card-text">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Android</li>
+                    <li class="list-group-item">IOS</li>
+                  </ul>
               </p>
-
-              <div class="card-columns">
-                <div class="card" style="display: inline-block">
-                  <img class="card-img-top" src="/img/logo/EnvironmentLogo.jpg" alt="ENVIRONMENT">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Windows</li>
-                        <li class="list-group-item">Mac</li>
-                        <li class="list-group-item">Linux</li>
-                      </ul>
-                    </p>
-                  </div>
-                </div>
-                <div class="card" style="display: inline-block">
-                  <img class="card-img-top" src="/img/logo/MobileLogo.jpg" alt="MOBILE">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Android</li>
-                        <li class="list-group-item">IOS</li>
-                      </ul>
-                  </p>
-                  </div>
-                </div>
-                <div class="card" style="display: inline-block">
-                  <img class="card-img-top" src="/img/logo/DatabaseLogo.jpg" alt="DATABASE">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Oracle</li>
-                        <li class="list-group-item">Microsoft SQL Server</li>
-                        <li class="list-group-item">MYSQL</li>
-                      </ul>
-                    </p>
-                  </div>
-                </div>
-                <div class="card" style="display: inline-block">
-                  <img class="card-img-top" src="/img/logo/WebLogo.jpg" alt="WEB">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">ASP.NET CORE | ASP.NET MVC C#</li>
-                        <li class="list-group-item">Java | Java EE</li>
-                        <li class="list-group-item">Javascript | JQuery</li>
-                        <li class="list-group-item">React | Node.js</li>
-                      </ul>
-                    </p>
-                  </div>
-                </div>
+              </div>
+            </div>
+            <div class="card" style="display: inline-block">
+              <img class="card-img-top" src="/img/logo/DatabaseLogo.jpg" alt="DATABASE">
+              <div class="card-body">
+                <p class="card-text">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Oracle</li>
+                    <li class="list-group-item">Microsoft SQL Server</li>
+                    <li class="list-group-item">MYSQL</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+            <div class="card" style="display: inline-block">
+              <img class="card-img-top" src="/img/logo/WebLogo.jpg" alt="WEB">
+              <div class="card-body">
+                <p class="card-text">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">ASP.NET CORE | ASP.NET MVC C#</li>
+                    <li class="list-group-item">Java | Java EE</li>
+                    <li class="list-group-item">Javascript | JQuery</li>
+                    <li class="list-group-item">React | Node.js</li>
+                  </ul>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </main>
+    </div>
+  </div>
+</main>
 
-    <!-- Include the header partial view for the Navigation Bar -->
-    <%- include('partials/footer.ejs') %>
-
-    <!-- Embed js files -->
-    <script type="text/javascript" src="/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="/bootstrap/dist/js/bootstrap.min.js"></script>
-  </body>
-</html>
+<!-- Include the footer partial view for the Navigation Bar -->
+<%- include('partials/footer.ejs') %>

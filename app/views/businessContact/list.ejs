@@ -1,0 +1,58 @@
+<!-- Include the header partial view for the Navigation Bar -->
+<%- include('../partials/header.ejs') %>
+
+<!-- Include the nav partial view for the Navigation Bar -->
+<%- include('../partials/nav.ejs') %>
+
+<!-- Main Content -->
+<main>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 class="display-4"><%= title %></h1>
+
+          <!-- <a href="/business-contact/add" class="btn btn-primary disabled" role="button">
+            <i class="fas fa-plus-circle"></i> Add a Contact</a>
+          <br> -->
+
+          <table class="table table-bordered table-striped table-hover">
+            <!-- Header Row-->
+            <tr class="">
+              <th class="text-center col-3">Contact Name <i class="fas fa-sort-alpha-up"></i></th>
+              <th class="text-center col-3">Contact Number</th>
+              <th class="text-center col-4">Email Address</th>
+              <th class="text-center col-2" colspan="2">Actions</th>
+            </tr>
+
+            <!-- Repeatable Template Row -->
+            <% for(let count=0; count < BusinessContactList.length; count++) { %>
+              <tr class="">
+                  <td class="text-center col-3">
+                    <%= BusinessContactList[count].contactName %>
+                  </td>
+                  <td class="text-center col-3">
+                    <%= BusinessContactList[count].contactNumber %>
+                  </td>
+                  <td class="text-center col-4">
+                    <%= BusinessContactList[count].email %>
+                  </td>
+                  <td class="text-center col-1">
+                    <a href="/business-contact/edit/<%= BusinessContactList[count]._id %>" class="btn btn-primary btn-sm">
+                      <i class="fas fa-pencil-alt"></i> Edit</a>
+                  </td>
+                  <td class="text-center col-1">
+                    <a href="/business-contact/delete/<%= BusinessContactList[count]._id %>" class="btn btn-danger btn-sm">
+                      <i class="fas fa-trash-alt"></i> Delete</a>
+                  </td>
+              </tr>
+              <% } %>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Include the footer partial view for the Navigation Bar -->
+<%- include('../partials/footer.ejs') %>

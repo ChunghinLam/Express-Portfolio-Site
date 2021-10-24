@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <div class="text-white lead">
+      <img class="logo" src="/img/logo/MyLogo.png" alt="logo" />
+      &nbsp;Welcome to My Portfolio Site
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <% if (title == "Home") { %>
+            <a class="nav-link active" aria-current="page" href="/"><i class="fas fa-home"></i> Home</a>
+          <% } else { %>
+            <a class="nav-link" aria-current="page" href="/"><i class="fas fa-home"></i> Home</a>
+          <% } %>
+        </li>
+        <li class="nav-item">
+          <% if (title == "About") { %>
+            <a class="nav-link active" aria-current="page" href="/about"><i class="fas fa-home"></i> About</a>
+          <% } else { %>
+            <a class="nav-link" aria-current="page" href="/about"><i class="fas fa-home"></i> About</a>
+          <% } %>
+        </li>
+        <li class="nav-item">
+          <% if (title == "Projects") { %>
+            <a class="nav-link active" aria-current="page" href="/projects"><i class="fas fa-satellite-dish"></i> Projects</a>
+          <% } else { %>
+            <a class="nav-link" aria-current="page" href="/projects"><i class="fas fa-satellite-dish"></i> Projects</a>
+          <% } %>
+        </li>
+
+        <li class="nav-item">
+          <% if (title == "Services") { %>
+            <a class="nav-link active" aria-current="page" href="/services"><i class="fas fa-cogs"></i> Services</a>
+          <% } else { %>
+            <a class="nav-link" aria-current="page" href="/services"><i class="fas fa-cogs"></i> Services</a>
+          <% } %>
+        </li>
+
+        <li class="nav-item">
+          <% if (title == "Contact") { %>
+            <a class="nav-link active" aria-current="page" href="/contact"><i class="fas fa-mobile-alt"></i> Contact</a>
+          <% } else { %>
+            <a class="nav-link" aria-current="page" href="/contact"><i class="fas fa-mobile-alt"></i> Contact</a>
+          <% } %>
+        </li>
+
+        <li class="nav-item">
+          <% if (title == "Business Contact") { %>
+            <a class="nav-link active" aria-current="page" href="/business-contact"><i class="fas fa-briefcase"></i> Business Contact</a>
+          <% } else { %>
+            <a class="nav-link" aria-current="page" href="/business-contact"><i class="fas fa-briefcase"></i> Business Contact</a>
+          <% } %>
+        </li>
+
+        <li class="nav-item">
+          <!-- user is login -->
+          <% if (typeof displayName == 'string' && displayName) { %>
+            <i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %>
+            <a class="nav-link" aria-current="page" href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+          <% } else { %>
+            <a class="nav-link" aria-current="page" href="/login"><i class="fas fa-sign-in-alt"></i> Login</a>
+          <% } %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

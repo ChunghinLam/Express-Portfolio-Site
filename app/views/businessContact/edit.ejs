@@ -1,0 +1,50 @@
+<!-- Include the header partial view for the Navigation Bar -->
+<%- include('../partials/header.ejs') %>
+
+  <!-- Include the nav partial view for the Navigation Bar -->
+  <%- include('../partials/nav.ejs') %>
+
+    <!-- Main Content -->
+    <main>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <h1 class="display-4">
+                <%= title %>
+              </h1>
+
+              <form class="form" method="POST">
+                <div class="form-group mb-3">
+                  <label for="contactNameTextField">Contact Name</label>
+                  <input type="text" class="form-control" id="contactNameTextField" placeholder="Enter the Contact Name"
+                    name="contactName" value="<%= businessContact.contactName %>" required>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="contactNumberTextField">Contact Number</label>
+                  <input type="text" class="form-control" id="contactNumberTextField"
+                    placeholder="Enter the Contact Number" name="contactNumber"
+                    value="<%= businessContact.contactNumber %>" required>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="emailTextField">Contact Email</label>
+                  <input type="email" class="form-control" id="emailTextField" placeholder="Enter the Email"
+                    name="email" value="<%= businessContact.email %>" required>
+                </div>
+
+                <button class="btn btn-primary" type="submit">
+                  <i class="fas fa-edit"></i> Submit</button>
+
+                <a href="/business-contact" class="btn btn-warning">
+                  <i class="fas fa-undo"></i> Cancel</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Include the footer partial view for the Navigation Bar -->
+    <%- include('../partials/footer.ejs') %>

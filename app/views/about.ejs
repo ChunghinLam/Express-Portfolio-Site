@@ -1,45 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
 
-    <!-- Embed css files -->
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/@fortawesome/fontawesome-free/css/all.min.css">
-  </head>
-  <body>
-    <!-- Include the header partial view for the Navigation Bar -->
-    <%- include('partials/header.ejs') %>
+<!-- Include the header partial view for the Navigation Bar -->
+<%- include('partials/header.ejs') %>
 
-    <!-- Main Content -->
-    <main>
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8">
-              <h1 class="display-4">LAM Chung Hin</h1>
-              <p class="lead">
-                I worked as a software engineer and web developer for several years when I was in Hong Kong. But I found that my knowledge and academic experience are insufficient, that's why in this summer, I enrolled a 2 years software engineering course in centennial college, major in artificial intelligence. because of that, I moved and lived in Toronto. I hope this is a way to strengthen my tech skills.
-                <br /><br />
-                If you are interested to know me more, please check my resume <a href="/assets/resume.pdf" download>here</a> for further details.
-              </p>
-            </div>
-            <div class="col-sm-4">
-              <img src="img/myphoto.jpg" alt="My Picture" style="width: 150px;" />
-            </div>
-          </div>
+<!-- Include the nav partial view for the Navigation Bar -->
+<%- include('partials/nav.ejs') %>
+
+<!-- Main Content -->
+<main>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <h1 class="display-4">LAM Chung Hin</h1>
+          <p class="lead">
+            I worked as a software engineer and web developer for several years when I was in Hong Kong. But I found that my knowledge and academic experience are insufficient, that's why in this summer, I enrolled a 2 years software engineering course in centennial college, major in artificial intelligence. because of that, I moved and lived in Toronto. I hope this is a way to strengthen my tech skills.
+            <br /><br />
+            If you are interested to know me more, please check my resume <a href="/assets/resume.pdf" download>here</a> for further details.
+          </p>
+        </div>
+        <div class="col-sm-4">
+          <img src="img/myphoto.jpg" alt="My Picture" style="width: 150px;" />
         </div>
       </div>
-    </main>
+    </div>
+  </div>
+</main>
 
-    <!-- Include the header partial view for the Navigation Bar -->
-    <%- include('partials/footer.ejs') %>
-
-    <!-- Embed js files -->
-    <script type="text/javascript" src="/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="/bootstrap/dist/js/bootstrap.min.js"></script>
-  </body>
-</html>
+<!-- Include the footer partial view for the Navigation Bar -->
+<%- include('partials/footer.ejs') %>
