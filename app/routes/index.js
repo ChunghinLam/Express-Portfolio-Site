@@ -16,14 +16,6 @@ router.get('/login', indexController.loginPage);
 router.post('/login', indexController.loginPageProcess);
 router.get('/logout', indexController.logout);
 
-// function to check if login
-// function requireAuth(req, res, next) {
-//     if (!req.isAuthenticated()) {
-//         return res.redirect('/login');
-//     }
-//     next();
-// }
-
 // router.get('/', function(req, res, next) {
 //     res.render('index', { title: 'Home'});
 // });

@@ -28,6 +28,7 @@ mongoDB.once('open', () => {
 let path = require('path');
 let indexRouter = require('../app/routes/index');
 let userRouter = require('../app/routes/user');
+let businessContactRouter = require('../app/routes/businessContact');
 //const app = require('../server');
 
 module.exports = function() {
@@ -78,6 +79,7 @@ module.exports = function() {
   // routing
   app.use('/', indexRouter);
   app.use('/user', userRouter);
+  app.use('/business-contact', businessContactRouter);
 
   // join path to shorten the referenced path
   app.use(express.static(path.join(__dirname, '../public'))); 
