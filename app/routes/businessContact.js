@@ -1,7 +1,6 @@
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
-
 let passport = require('passport');
 let businessContactController = require('../controllers/businessContact');
 
@@ -13,17 +12,17 @@ function requireAuth(req, res, next) {
     next();
 }
 
-router.get('/', businessContactController.businessContactDisplay);
+router.get('/', requireAuth, businessContactController.businessContactDisplay);
 
 // add functions are not included in the requirement of this phase
 // router.get('/add', requireAuth, businessContactController.businessContactAdd);
 
 // router.post('/add', requireAuth, businessContactController.businessContactAddProcess);
 
-router.get('/edit/:id', businessContactController.businessContactEdit);
+router.get('/edit/:id', requireAuth, businessContactController.businessContactEdit);
 
-router.post('/edit/:id', businessContactController.businessContactEditProcess);
+router.post('/edit/:id', requireAuth, businessContactController.businessContactEditProcess);
 
-router.get('/delete/:id', businessContactController.businessContactDelete);
+router.get('/delete/:id', requireAuth, businessContactController.businessContactDelete);
 
 module.exports = router;

@@ -18,7 +18,7 @@ module.exports.businessContactDisplay = (req, res, next) => {
           displayName: req.user ? req.user.displayName : ''
         });
     }
-  }).sort( { "contactName" : 1 });
+  }).sort({ 'contactName': 1 });
 }
 
 module.exports.businessContactEdit = (req, res, next) => {

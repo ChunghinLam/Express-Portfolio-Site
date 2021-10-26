@@ -5,6 +5,7 @@ let router = express.Router();
 router.get('/', function(req, res, next) {
     res.send('Placeholder');
 });
+
 // router.get('/', (req, res, next) => {
 //     User.find((err, UserList) => {
 //         if (err)

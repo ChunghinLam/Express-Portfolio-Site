@@ -2,7 +2,12 @@
   <div class="container-fluid">
     <div class="text-white lead">
       <img class="logo" src="/img/logo/MyLogo.png" alt="logo" />
-      &nbsp;Welcome to My Portfolio Site
+      &nbsp;Welcome
+      <% if (typeof displayName == 'string' && displayName) { %>
+        , <%= displayName %>
+      <% } else { %>
+        to my Portfolio Site
+      <% } %>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -58,7 +63,7 @@
         <li class="nav-item">
           <!-- user is login -->
           <% if (typeof displayName == 'string' && displayName) { %>
-            <i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %>
+            
             <a class="nav-link" aria-current="page" href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
           <% } else { %>
             <a class="nav-link" aria-current="page" href="/login"><i class="fas fa-sign-in-alt"></i> Login</a>
