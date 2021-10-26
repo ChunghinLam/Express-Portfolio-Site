@@ -16,28 +16,8 @@ router.get('/login', indexController.loginPage);
 router.post('/login', indexController.loginPageProcess);
 router.get('/logout', indexController.logout);
 
-// router.get('/', function(req, res, next) {
-//     res.render('index', { title: 'Home'});
-// });
-
-// router.get('/about', function(req, res, next) {
-//     res.render('about', { title: 'About'});
-// });
-
-// router.get('/projects', function(req, res, next) {
-//     res.render('projects', { title: 'Projects'});
-// });
-
-// router.get('/services', function(req, res, next) {
-//     res.render('services', { title: 'Services'});
-// });
-
-// router.get('/contact', function(req, res, next) {
-//     res.render('contact', { title: 'Contact'});
-// });
-
-// router.get('/login', function(req, res, next) {
-//     res.render('login', { title: 'Login'});
-// });
+// reister functions is not in the requirement, but it is needed to create user
+router.get('/register', indexController.displayRegisterPage);
+router.post('/register', indexController.processRegisterPage);
 
 module.exports = router;
